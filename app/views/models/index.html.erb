@@ -1,2 +1,32 @@
-<h1>Models#index</h1>
-<p>Find me in app/views/models/index.html.erb</p>
+<article class="products">
+					<header>
+						<h2>Recently Added Posts</h2>
+					</header>
+						
+	<section id="featured">
+				<%i = 0%>		
+				<%@postings.each do |post|%>
+					<%++i%>
+					<ul class="column">
+						
+					    <!--eqblock-->
+					    <li>	
+					        <section class="outerblock">
+					        	<div class="innerblock">
+										<a href="#"><img src="images/tees/hotpinkthumb.png" alt="" /></a> 
+											<p>
+											<b><%=link_to post.name, posting_path(post.id)%></b>
+											<br />
+											</p> 
+											<a href="#"><img src="images/buynow.png" alt="buy now" /></a>
+										</div>
+					        </section>
+					    </li>
+					    <%if i == postings_per_row%>
+							</br>	
+							<i = 0>
+						<%end%>		    
+					</ul>
+				<%end%>
+	</section>
+</article>
