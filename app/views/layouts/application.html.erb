@@ -14,11 +14,11 @@
 	</header>
 	<nav>
 		<ul>
-			<li class="selected"><a href="#">Home</a></li>
-			<li><a href="#">Commands</a></li>
-			<li><a href="#">Models</a></li>
-			<li><a href="#">Support</a></li>
-			<li><a href="#">Contact Us</a></li>
+			<li class="selected"><%=link_to("Home" , welcome_index_path)%></li>
+			<li><%=link_to("Commands" , commands_index_path)%></li>
+			<li><%=link_to("Models" , models_index_path)%></li>
+			<li><%=link_to("Tricks" , tricks_index_path)%></li>
+			<li><%=link_to("Contact Us" , contact_us_index_path)%></li>
 		</ul>
 	</nav>
 	<section id="intro">
@@ -37,9 +37,9 @@
 					<h3>Connect With Us</h3>
 				</header>
 				<ul>
-					<li><a href="#">Twitter</a></li>
-					<li><a href="#">Facebook</a></li>
-					<li><a href="#">Google Plus</a></li>
+					<li><%=link_to "Twitter", "https://twitter.com/adskfusion360"%></li>
+					<li><%=link_to "Facebook", "https://www.facebook.com/Fusion360"%></li>
+					<li><%=link_to "Google Plus", "https://plus.google.com/+AutodeskFusion360"%></li>
 				</ul>
 			</section>
 
@@ -48,8 +48,9 @@
 					<h3>Recent Articles</h3>
 				</header>
 					<ul>
-						<li><a href="#">Whats new in Jan Release</a></li>
-						<li><a href="#">Fusion in Education</a></li>
+						<li><%=link_to "What's new in Jar Release", "http://forums.autodesk.com/t5/design-differently/fusion-360-update-is-here-3-new-ways-to-help-you-design/ba-p/4768909"%></li>
+						<li><%=link_to "Training Course", "https://www.myigetit.com/Library/CourseDetails/10498?catID=69&name=Autodesk_Fusion_360_Basics_Training_Course"%></li>
+						
 					</ul>
 			</section>
 			

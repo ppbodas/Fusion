@@ -1,4 +1,14 @@
 Fusion::Application.routes.draw do
+  get "contact_us/index"
+
+  get "tricks/index"
+
+  get "models/index"
+
+  get "commands/index"
+
+  get "welcome/index"
+
   resources :postings
 
 
@@ -51,7 +61,7 @@ Fusion::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'postings#index'
+  root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 

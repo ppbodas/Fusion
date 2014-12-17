@@ -151,7 +151,7 @@ nav ul li.selected a {
 
 #content {
 	float: right; 
-	width: 610px; 
+	width: 685px; 
 	margin:10px 5px 10px 0; 
 	padding:5px 20px 5px 20px;
 	background-color: #f2f2f2;
@@ -164,7 +164,7 @@ nav ul li.selected a {
 aside {
 	float: left;
 	text-align: left; 
-	width: 300px; 
+	width: 225px; 
 	margin:0; 
 	padding:0;
 	}
