@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @postings = Posting.where(category:0).order("created_at desc")
+    @postings = Posting.last(6).reverse
   end
 end
