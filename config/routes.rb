@@ -1,4 +1,6 @@
 Fusion::Application.routes.draw do
+  devise_for :users
+
   get "contact_us/index"
 
   get "tricks/index"

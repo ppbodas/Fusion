@@ -10,8 +10,10 @@
 <body>
 
 	<header>
-		<h1>Learn Share Fusion 360</h1>
+		<h1>Learn Share Fusion 360</h1>		
 	</header>
+	
+	
 	<nav>
 		<ul>
 			<li class="selected"><%=link_to("Home" , welcome_index_path)%></li>
@@ -19,6 +21,13 @@
 			<li><%=link_to("Models" , models_index_path)%></li>
 			<li><%=link_to("Tricks" , tricks_index_path)%></li>
 			<li><%=link_to("Contact Us" , contact_us_index_path)%></li>
+			<li>
+				<%if user_signed_in?%> 
+					<%=link_to "Sign Out", destroy_user_session_path, :method => :delete%>
+				<%else%>
+					<%=link_to "Sign In", user_session_path%> 
+				<%end%>
+			</li>
 		</ul>
 	</nav>
 	<section id="intro">
@@ -28,6 +37,9 @@
 		<p>This website is meant to learn Fusion using differnt tutorials.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
 	</section>
 	<div id="content">
+		<% if flash[:alert] -%>
+			<p class="alert"><%= alert %></p>
+	    <%end%>
 		<%= yield %>
 	</div>
 		
