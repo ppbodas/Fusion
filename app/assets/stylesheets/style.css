@@ -279,7 +279,7 @@ aside section header h3 {
 }
 
 #featured .outerblock {
-	height: 255px;
+	height: 125px;
 	font-size: 1em;
 	margin-right: 30px; /*Creates the gap between each column*/
 	padding: 20px;
@@ -290,7 +290,7 @@ aside section header h3 {
 	}	
 
 #featured .innerblock {
-	height: 220px;
+	height: 90px;
 	font-size: 1em;
 	padding: 20px;
 	background: #fff;

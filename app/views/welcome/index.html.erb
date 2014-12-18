@@ -1,1 +1,41 @@
-<%=link_to "Create New Posting", new_posting_path%>
+
+<article class="products">
+					<header>
+						<h2><%=link_to "Create New Posting", new_posting_path%></h2>
+					</header>
+</article>
+</p>
+</p>
+</p>
+</br>
+<article class="products">
+					<header>
+						<h2>Recently Added Posts</h2>
+					</header>
+						
+	<section id="featured">
+				<%i = 0%>		
+				<%@postings.each do |post|%>
+					<%++i%>
+					<ul class="column">
+						
+					    <!--eqblock-->
+					    <li>	
+					        <section class="outerblock">
+					        	<div class="innerblock">
+										<a href="#"><%=image_tag "FusionLogo.jpg"%></a> 
+											<p>
+											<b><%=link_to post.name, posting_path(post.id)%></b>
+											<br />
+											</p> 
+								</div>
+					        </section>
+					    </li>
+					    <%if i == postings_per_row%>
+							</br>	
+							<i = 0>
+						<%end%>		    
+					</ul>
+				<%end%>
+	</section>
+</article>

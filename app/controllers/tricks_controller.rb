@@ -1,6 +1,5 @@
 class TricksController < ApplicationController
   def index
-    @postings = Posting.where(category:2)
-    @postings.order("created_at desc")
+    @postings = Posting.where(category:2).order("created_at desc")
   end
 end

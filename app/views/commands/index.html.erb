@@ -1,4 +1,3 @@
-
 <article class="products">
 					<header>
 						<h2>Recently Added Posts</h2>
@@ -14,13 +13,12 @@
 					    <li>	
 					        <section class="outerblock">
 					        	<div class="innerblock">
-										<a href="#"><img src="images/tees/hotpinkthumb.png" alt="" /></a> 
+										<a href="#"><%=image_tag "FusionLogo.jpg"%></a> 
 											<p>
 											<b><%=link_to post.name, posting_path(post.id)%></b>
 											<br />
 											</p> 
-											<a href="#"><img src="images/buynow.png" alt="buy now" /></a>
-										</div>
+								</div>
 					        </section>
 					    </li>
 					    <%if i == postings_per_row%>
