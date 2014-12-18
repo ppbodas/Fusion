@@ -7,6 +7,9 @@
     <th>Name</th>
     <th>Description</th>
     <th>Category</th>
+    <%if current_user != nil && current_user.admin?%>
+    	<th>Accepted</th>
+    <%end%>
     <th></th>
     <th></th>
     <th></th>
@@ -17,6 +20,9 @@
     <td><%= posting.name %></td>
     <td><%= posting.description %></td>
     <td><%= posting.category %></td>
+    <%if current_user != nil && current_user.admin?%>
+    	<td><%= posting.accepted %></td>
+    <%end%>
     <td><%= link_to 'Show', posting %></td>
     <td><%= link_to 'Edit', edit_posting_path(posting) %></td>
     <td><%= link_to 'Destroy', posting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
